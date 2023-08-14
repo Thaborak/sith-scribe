@@ -1,0 +1,33 @@
+# SithScribe
+
+Welcome to SithScribe a Star wars API note taking application! This application allows users to create, read, update, and delete notes, as well as search for and display data about Star Wars characters.
+
+## Features
+
+- Create, read, update, and delete (CRUD) operations for notes
+- Star Wars character lookup using the SWAPI (Star Wars API)
+- Single-page application using React
+
+## Getting Started
+
+To get started with the application, follow the steps below.
+
+### Prerequisites
+
+- Docker desktop (recommended)
+
+or
+
+- Node.js
+- MongoDB
+
+### Installation
+
+1. Clone this repository to your local machine.
+
+2. Navigate to the project directory:
+
+   ```sh
+   cd sith-scribe
+   docker-compose up --build
+   ```

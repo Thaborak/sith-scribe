@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.3",
+    "nodemon": "^3.0.1"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "start:dev": "nodemon src/server.js",
+    "test": "npx mocha src/tests/**/*.test.js",
+    "start:testdb": "docker-compose -f docker-compose.test.yml up -d",
+    "stop:testdb": "docker-compose -f docker-compose.test.yml down"
+  },
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "chai": "^4.3.7",
+    "chai-http": "^4.4.0",
+    "mocha": "^10.2.0"
+  }
+}
