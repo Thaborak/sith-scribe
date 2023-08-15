@@ -12,7 +12,6 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-
 # Expose the port that your application will listen on
 EXPOSE 3001
 

@@ -1,18 +1,13 @@
 const mongoose = require("mongoose");
-const config = require("./config/config");
 
-const MONGODB_URI =
-  config.MONGODB_URI || "mongodb://localhost:27017/sith-scribe";
+// Connect to the MongoDB database
+const connectDB = async () => {
+  try {
+    await mongoose.connect("mongodb://localhost:27017/sith-scribe");
+    console.log("Connected to MongoDB");
+  } catch (error) {
+    console.error("MongoDB connection error:", error);
+  }
+};
 
-mongoose.connect(MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-  useCreateIndex: true,
-});
-
-const db = mongoose.connection;
-db.on("error", console.error.bind(console, "MongoDB connection error:"));
-db.once("open", () => {
-  console.log("Connected to MongoDB");
-});
+module.exports = connectDB;
