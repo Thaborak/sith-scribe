@@ -2,6 +2,11 @@
 
 Welcome to SithScribe a Star wars API note taking application! This application allows users to create, read, update, and delete notes, as well as search for and display data about Star Wars characters.
 
+## Live Link
+
+**https://sithscribe-a3dcb91553bf.herokuapp.com/**
+![Alt text](screenshot.png)
+
 ## Features
 
 - Create, read, update, and delete (CRUD) operations for notes
@@ -105,3 +110,10 @@ Directory Structure Overview:
 - /src/tests: Contains integration tests.
 - /client/public: Public assets for the frontend.
 - /client/src: React components, styles, and other frontend files.
+
+#### Future Additions
+
+- user login with Oauth and personal notes
+- redesign with good component library (material UI) or custom
+- extend search to other parts of the swapi ex: ships, locations, etc....
+- link searchable data into notes
