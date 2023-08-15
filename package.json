@@ -8,7 +8,7 @@
     "nodemon": "^3.0.1"
   },
   "scripts": {
-    "build": "cd client && npm run build",
+    "build": "cd src/client && npm run build",
     "start": "node src/server.js",
     "start:dev": "nodemon src/server.js",
     "test": "npx mocha src/tests/**/*.test.js",
