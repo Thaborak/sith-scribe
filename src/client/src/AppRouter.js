@@ -5,6 +5,7 @@ import NotePage from "./components/NotePage";
 
 function AppRouter() {
   return (
+    // Wrap your App component with BrowserRouter and routes
     <Router>
       <Routes>
         <Route path="/" element={<SearchPage />} />

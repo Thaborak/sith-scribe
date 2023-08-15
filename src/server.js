@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 const connectDB = require("./db/db.js");
 const app = express();
 const config = require("../config/config");
@@ -14,15 +15,19 @@ const port = config.PORT;
 app.use(cors());
 app.use(express.json());
 
+// Serve static files from the build directory
+app.use(express.static(path.join(__dirname, "client/build")));
+
 // Routes
 const notesRoutes = require("./routes/notes");
 const charactersRoutes = require("./routes/characters");
 
-// Heathcheck route
+// Serve the index.html for all unmatched routes
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.sendFile(path.join(__dirname, "client/build", "index.html"));
 });
 
+// Handle other routes or API endpoints here
 app.use("/api/notes", notesRoutes);
 app.use("/api/characters", charactersRoutes);
 
