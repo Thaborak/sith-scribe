@@ -8,6 +8,32 @@ Welcome to SithScribe a Star wars API note taking application! This application 
 - Star Wars character lookup using the SWAPI (Star Wars API)
 - Single-page application using React
 
+## Design
+
+Backend (Express.js and MongoDB):
+
+For this challenge Express.js and MongoDB were choosen as the backend framework.
+Integrated MongoDB using Mongoose to handle database operations.
+Structured the project into organized folders (controllers, models, routes, services) to separate concerns and improve maintainability.
+Implemented API endpoints for CRUD operations on notes and character search.
+Created a db.js file to manage the database connection and configuration.
+Used environment variables to securely store sensitive information.
+Set up Mocha and Chai for integration testing using a separate test database with docker.
+Configured Docker and Docker Compose to containerize the application and its dependencies.
+
+Frontend (React):
+
+React was choosen as the frontend library for building a single-page application.
+Used styled-components for CSS styling with a Star Wars theme.
+The overall design and css could use some more work but that was my least concern.
+Designed somewhat reusable components such as the header, search bar, search results, and create note form.
+Implemented state management using React hooks, including useState and useEffect.
+Utilized Axios for making HTTP requests to the backend API.
+Organized code into folders and components for better structure and maintainability.
+Implemented responsive design to ensure a good user experience across different screen sizes.
+Employed error handling and loading indicators to provide feedback to users during API requests.
+Set up routing using react-router-dom and adapted for server-side rendering.
+
 ## Getting Started
 
 To get started with the application, follow the steps below.

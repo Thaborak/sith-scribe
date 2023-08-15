@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./Header";
-import CharacterSearch from "./CharacterSearch";
+import Header from "../components/Header";
+import CharacterSearch from "../components/CharacterSearch";
 
 function SearchPage() {
   return (

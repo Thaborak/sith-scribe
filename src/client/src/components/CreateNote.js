@@ -43,6 +43,7 @@ const ResponsiveForm = styled(Form)`
   }
 `;
 
+// CreateNote component
 function CreateNote({ onAddNote, onEditNote, onNoteEdited }) {
   const [noteTitle, setNoteTitle] = useState("");
   const [noteText, setNoteText] = useState("");
@@ -55,14 +56,17 @@ function CreateNote({ onAddNote, onEditNote, onNoteEdited }) {
     }
   }, [onEditNote]);
 
+  // Handle note title change
   const handleNoteTitleChange = (event) => {
     setNoteTitle(event.target.value);
   };
 
+  // Handle note text change
   const handleNoteTextChange = (event) => {
     setNoteText(event.target.value);
   };
 
+  // Handle form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (noteTitle.trim() !== "" && noteText.trim() !== "") {
@@ -74,14 +78,17 @@ function CreateNote({ onAddNote, onEditNote, onNoteEdited }) {
             content: noteText,
           });
           onNoteEdited(editedNote); // Call onNoteEdited after editing
+          // Reset form fields
           setNoteTitle("");
           setNoteText("");
         } else {
           const newNote = await createNote({
+            // could add dto here
             title: noteTitle,
             content: noteText,
           });
           onAddNote(newNote);
+          // Reset form fields
           setNoteTitle("");
           setNoteText("");
         }

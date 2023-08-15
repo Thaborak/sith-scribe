@@ -53,6 +53,7 @@ export const CharacterSearch = () => {
   const [searchResults, setSearchResults] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  // search for character by name
   const handleSearch = async () => {
     setLoading(true);
     if (searchTerm) {
@@ -71,7 +72,7 @@ export const CharacterSearch = () => {
         <SearchWrapper>
           <SearchInput
             type="text"
-            placeholder="Search for a Star Wars character Example: Luke Skywalker"
+            placeholder="Luke Skywalker"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />

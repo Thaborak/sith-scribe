@@ -34,6 +34,7 @@ export const deleteNote = async (id) => {
   return response.data;
 };
 
+// fetch character by name
 export const fetchCharacterByName = async (name) => {
   try {
     const response = await api.get(`/characters/?name=${name}`);

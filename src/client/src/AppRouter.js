@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import SearchPage from "./components/SearchPage";
-import NotePage from "./components/NotePage";
+import SearchPage from "./pages/SearchPage";
+import NotePage from "./pages/NotePage";
 
 function AppRouter() {
   return (
