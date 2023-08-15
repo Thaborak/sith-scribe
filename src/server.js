@@ -22,11 +22,13 @@ app.use(express.static(path.join(__dirname, "client/build")));
 const notesRoutes = require("./routes/notes");
 const charactersRoutes = require("./routes/characters");
 
-// Serve the index.html for all unmatched routes
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build", "index.html"));
 });
 
+app.get("/notes", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build", "index.html"));
+});
 // Handle other routes or API endpoints here
 app.use("/api/notes", notesRoutes);
 app.use("/api/characters", charactersRoutes);
